@@ -1,0 +1,219 @@
+* {
+
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    color: #333333;
+    background: #333;
+}
+
+.img-wrap {
+    text-align: center;
+}
+
+img {
+    max-height: 60vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+img.small {
+    height: 100px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.xl {
+    font-size: 5em;
+
+}
+
+.caption,
+.about {
+    color: #555555;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+a {
+    color: #E9212D
+}
+
+p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin: 1em;
+}
+
+p.larger {
+    font-size: 1.5em;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    color: #E9212D
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    font-weight: lighter;
+
+}
+
+main {
+    position: relative;
+    display: block;
+    background: white;
+    z-index: 2;
+    padding: 1em;
+}
+
+.background {
+    display: none;
+}
+
+
+
+.robot {
+    background: url("/images/starship-bot.jpg");
+
+}
+
+.redhawk {
+    background: url("/images/redhawk.jpeg")
+}
+
+
+
+header {
+    display: fixed;
+    text-align: center;
+}
+
+nav {
+    display: inline-flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+nav a,
+nav h2 {
+    display: inline-block;
+    color: white;
+    font-size: 2.5em;
+    text-decoration: none;
+    z-index: 2;
+    padding: 10px;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+nav h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.75em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.gridItem {
+    position: relative;
+    text-decoration: none;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-around;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2)
+}
+
+
+.gridItem:hover {
+    opacity: .85;
+
+}
+
+.cardbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .2;
+    display: block;
+}
+
+.gridItem h3 {
+    position: relative;
+    z-index: 2;
+    color: #333333;
+    font-size: 1.8em;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: lighter;
+}
+
+.tags span {
+    position: relative;
+    background: #E9212D;
+    color: white;
+    padding: 3px;
+    border-radius: 6px;
+    line-height: 2;
+    z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: max(40vw, 700px);
+        margin: auto;
+        padding: 2em;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, .2)
+    }
+
+    main.wide {
+        width: max(60vw, 700px);
+    }
+
+    main.center {
+        text-align: center;
+    }
+
+    nav {
+        width: max(40vw, 700px);
+        margin: auto;
+    }
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .2;
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
